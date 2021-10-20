@@ -7,11 +7,11 @@
 
 <head>
 
-	<title>Login</title>
-	
-	
+    <title>Student Login</title>
+    
+
     <!-- Favicon icon -->
-   <link rel="icon" type="image/png" href="{% static 'images/favicon-icon.png' %}"/>
+   <link rel="icon" type="image/png" href="{% static '/images/favicon-icon.png' %}"/>
 
     <!-- font css -->
     <link rel="stylesheet" href="{% static 'fonts/feather.css' %}">
@@ -35,9 +35,9 @@
 
 <div class="auth-wrapper">
     <div class="auth-content" style="width: 550px;">
-        <div class="align-items-center text-center">
-            <img src="{% static 'AdminArea/images/logo.png' %}" alt="" class="img-fluid mb-4" height="200px" width="200px"> 
-        </div>
+        <!-- <div class="align-items-center text-center">
+            <img src="{% static 'images/logo.png' %}" alt="" class="img-fluid mb-4" height="200px" width="200px"> 
+        </div> -->
         <div class="card">
             <div class="row align-items-center text-center">
                 <div class="col-md-12">
@@ -53,31 +53,31 @@
                     {% endif %}
 
                     <div class="card-body">
-                         <img src="{% static 'AdminArea/images/kalaveethi_logo.png' %}" class="mb-2"height="75px" width="75px">
-                        <form class="login100-form validate-form" action="" method="POST">
+                        <img src="{% static 'images/logo.jpg' %}" class="mb-2"height="75px" width="75px">
+                        <form class="login100-form validate-form" action="{% url 'Dashboard' %}" method="POST">
                             {% csrf_token %}        
                            
                             <div class="row">
                             </div>
-                            <h2 class="mb-3 f-w-500">Student Login</h2>
+                            <h2 class="mb-3 f-w-500">Login</h2>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><span class="material-icons-outlined">
                                 school</span></span>
-                                <input type="text" name="sid" class="form-control" placeholder="Student Id Number">
+                                <input type="text" name="admin_email" class="form-control" placeholder="Email">
                             </div>
                             <div class="input-group">
                                 <span class="input-group-text"><span class="material-icons-outlined">
                                 password</span></span>
-                                <input type="password" name="password" class="form-control" placeholder="Password">
+                                <input type="password" name="admin_password" class="form-control" placeholder="Password">
                             </div>
                             <div class="">
                                 <small class="form-text text-muted"><p class="mb-2 text-sm text-muted" style="padding: 5px 5px 5px 5px;"> <a href="" class="f-w-500">Forgot password?</a></p></small>
                             </div>
 
                             <button type="submit"class="col-sm btn btn-block btn-primary mb-4 ">Login</button>
-                            <div class="saprator"><span>OR</span></div>
+                           
 
-                            
+                           
                         </div>
                     </form>
                     </div> 
@@ -107,7 +107,7 @@
   gtag('js', new Date());
   gtag('config', 'G-Q8H86P6FK7');
 </script>
-<script src="assets/js/%c3%a1%c2%b9%c2%adrack.html"></script>
+
 
 
 </body>

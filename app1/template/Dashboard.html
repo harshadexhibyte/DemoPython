@@ -1,0 +1,144 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dashboard</title>
+    <
+    <link rel="icon" href="{% static 'images/favicon.svg' %}" type="image/x-icon">
+
+    <!-- font css -->
+    <link rel="stylesheet" href="{% static 'fonts/feather.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/material.css' %}">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" id="main-style-link">
+    <link rel="stylesheet" href="{% static 'css/customizer.css' %}">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Two+Tone|Material+Icons+Sharp">
+
+    
+
+</head>
+
+<body class="">
+	
+       <div class="p-5">
+       <!-- [ breadcrumb ] start -->
+        
+        <!-- [ breadcrumb ] end -->
+        <!-- [ Main Content ] start -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Add Data</h5>
+                    </div>
+                    <center>
+                      <div class="form-group" style="color: red; font-weight: 500">
+                      {% if msg %}
+                          {{msg}}
+                      {% endif %}
+                      </div>
+                      <br>
+                      </center>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="row">
+                            {% if SuccessMsg %}
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <strong>{{SuccessMsg}}.</strong>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            {% endif %}
+                            {% if FailedMsg %}
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <strong>{{FailedMsg}}</strong>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                        {% endif %}
+                        </div>
+                            <form class="login100-form validate-form" enctype="multipart/form-data" action="{% url 'fileUploded' %}" method="POST">
+                                    {% csrf_token %}
+                           
+                            <!-- <div class="col-md-12">
+                                <div class="form-group">
+                                        <label class="form-label" for="exampleFormControlSelect1">Choose </label>
+                                        <select class="form-control" required id="exampleFormControlSelect1" name="course">
+                                            <option value="">Choose Course Name</option>
+                                            <option value="Fashion Design">X</option>
+                                            <option value="Texttile Design">Y</option>
+                                            <option value="Graphic Design">Z</option>
+                                            <option value="Jewellery Design">A</option>
+                                            <option value="Fine Art">B</option>
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                 <div class="form-group">
+                                    <label class="form-label" for="exampleInputEmail1">Choose</label>
+                                    <input type="text" class="form-control" required id="exampleInputname1" aria-describedby="emailHelp" placeholder="" name="batch_name">
+                                </div>
+                            </div>
+                             <div class="col-md-12">
+                                 <div class="form-group">
+                                    <label class="form-label" for="exampleInputEmail1">Choose</label>
+                                    <input type="text" class="form-control" required id="exampleInputname1" aria-describedby="emailHelp" placeholder="" name="subject">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="form-label" for="exampleFormControlTextarea1">Choose</label>
+                                        <textarea class="form-control" required id="exampleFormControlTextarea1" rows="3" name="desc"></textarea>
+                                    </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="form-label" for="exampleInputfile1">Choose</label>
+                                    <input type="date" class="form-control" required id="exampleInputdate" name="date" placeholder="">
+                                </div>
+                            </div>-->
+                           	<div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="form-label" for="exampleInputPassword1">Choose</label>
+                                    <input type="file" class="form-control" required id="exampleInputfile1" name="uplodedFile" placeholder="">
+                                </div>
+                            </div> 
+                              <div class="row">
+                                <div class="form-group col-md-6">
+                                   <button type="submit" class="btn btn-success"><i class="me-2" data-feather="check-circle"></i>Save</button>
+                                </div>
+                            </div> 
+
+                        </div>
+                        </form>
+    
+</div>
+
+    <script src="{% static 'js/vendor-all.min.js' %}"></script>
+    <script src="{% static 'js/plugins/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/plugins/feather.min.js' %}"></script>
+    <script src="{% static 'js/pcoded.min.js' %}"></script>
+<!-- Apex Chart -->
+<script src="{% static 'js/plugins/apexcharts.min.js' %}"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8H86P6FK7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Q8H86P6FK7');
+</script>
+<script src="{% static 'js/%c3%a1%c2%b9%c2%adrack.html' %}"></script>
+
+<!-- custom-chart js -->
+<script src="{% static 'js/pages/dashboard-sale.js' %}"></script>
+
+</body>
+
+
+<!-- Mirrored from dashboardkit.io/bootstrap/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Mar 2021 09:37:34 GMT -->
+</html>
